@@ -1,0 +1,61 @@
+h4 {
+    color: #fff;
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+span {
+    margin-bottom: 100px;
+}
+
+button {
+    color: #fff;
+    min-height: 40px;
+    border: #fff 1px solid;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 160px;
+    margin-bottom: 20px;
+
+}
+
+.container {
+    height: 100%;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 80%;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 220px;
+    margin-bottom: 40px;
+}
+
+.container-button {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.start {
+    background-color: #4C8892;
+}
+
+.more {
+    background-color: #6C8B83;
+}

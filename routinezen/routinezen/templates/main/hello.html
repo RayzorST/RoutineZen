@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'main\css\hello.css' %}" />
+{% endblock %}
+
+{% block content %}
+<form class="container-card" method="post">
+    {% csrf_token %}
+    <h4>Начни менять свою жизнь к лучшему!</h4>
+    <span>Трекер привычек — это твой личный помощник в формировании полезных и избавлении от вредных привычек. Начни сегодня и увидь прогресс уже через неделю!</span>
+        
+    <div class="container-button">
+        <button class="more" type="submit" name="more">Узнать больше</button>
+        <button class="start" type="submit" name="start">Начать</button>
+    </div>
+</form>
+
+<h3>Почему выбирают нас?</h3>
+
+<div class="container-row">
+    <div class="container-card">
+        <h4>Статистика прогресса</h4>
+        <span>Отслеживай свои успехи каждый день. Видишь, как растет твоя цепочка</span>
+    </div>
+
+    <div class="container-card">
+        <h4>Персональный набор целей</h4>
+        <span>Ставь цели и достигай их. Мы поможем тебе оставаться на пути к успеху!</span>
+    </div>
+</div>
+
+<form class="container-card" method="post">
+    {% csrf_token %}
+    <h4>Простота и удобство</h4>
+    <span>Минималистичный дизайн и интуитивный интерфейс. Трекер, который работает для тебя! Ведь вся суть борьбы со своей ленью или зависимостью в самоконтроле и отслеживании. Вперед, у тебя все получится!</span>
+    <div class="container-button">
+        <button class="start" type="submit" name="start">Начать</button>
+    </div>
+</form>
+{% endblock %}

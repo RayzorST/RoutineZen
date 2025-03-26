@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'account\css\login.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="container-min-width">
+  <h3>Войдите в аккаунт</h3>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <label for="username">Введите никнейм:</label>
+    <input type="text" id="username" name="username" placeholder="ivanov"/>
+    <label for="password">Введите пароль:</label>
+    <input type="password" id="password" name="password" placeholder="•••••••"/>
+    <button type="login" name="login">Войти</button>
+  </form> 
+  <div class="link">
+    <span>Или </span><a href="/account/registration/">зарегистрируйтесь</a><span>, если нет аккаунта</span>
+  </div>
+</div>
+{% endblock %}

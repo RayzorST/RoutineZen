@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'account\css\registration.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="container-min-width">
+  <h3>Зарегистрируйтесь</h3>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <label for="username">Введите никнейм:</label>
+    <input type="text" id="username" name="username" placeholder="ivanov"/>
+    <div class="inputs">
+      <div class="input-name">
+        <label for="first_name">Введите имя:</label>
+        <input type="text" id="first_name" name="first_name" placeholder="Иван"/>
+      </div>
+      <div class="input-name">
+        <label for="last_name">Введите фамилию:</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Иванов"/>
+      </div>
+    </div>
+    <label for="password">Введите пароль:</label>
+    <input type="password" id="password" name="password" placeholder="•••••••"/>
+    <label for="password">Повторите пароль:</label>
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="•••••••"/>
+    <button type="sumbit" name="registration">Зарегистрироваться</button>
+  </form>  
+  <div class="link">
+    <span>Или </span><a href="/account/login/">войдите</a><span>, если есть аккаунт</span>
+  </div>
+</div>
+{% endblock %}

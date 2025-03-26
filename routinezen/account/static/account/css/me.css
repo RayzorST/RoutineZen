@@ -1,0 +1,49 @@
+.profile {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+
+    padding: 50px 0px 20px 0px;
+}
+
+.name-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-joined {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.profile-name {
+    margin: 3px;
+    display: inline-block;
+}
+
+.avatar {
+    display: inline-block;
+    background-color: #51B196;
+
+    border-radius: 100%;
+    margin: 0px 10px 0px 5px;
+    height: 50px;
+    width: 50px;
+}
+
+.trackers {
+    padding: 30px 5px 30px 5px;
+}
+
+
+.tracker {
+    background-color: #4C8892;
+    margin: 20px;
+    padding: 10px;
+    border: #000 solid 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}

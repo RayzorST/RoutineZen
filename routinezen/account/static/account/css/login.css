@@ -1,0 +1,40 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 0px;
+    color: #fff;
+}
+
+input {
+    background-color: #6B8C83;
+    color: #fff;
+    font-size: 20px;
+    min-height: 40px;
+    border: #fff 1px solid;
+    border-radius: 5px;
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4C8892;
+    color: #fff;
+    min-height: 40px;
+    border: #fff 1px solid;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container-min-width {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

@@ -12,7 +12,7 @@ def account(request):
     return redirect("/account/login")
 
 class RegistrationFormView(FormView):
-    template_name = "main\\registration.html"
+    template_name = "account\\registration.html"
     form_class = RegistrationFrom
     success_url = "/account/me="
 
@@ -26,21 +26,25 @@ class RegistrationFormView(FormView):
         return super().form_valid(form)
     
 class LoginFormView(FormView):
-    template_name = "main\\login.html"
+    template_name = "account\\login.html"
     form_class = LoginForm
     success_url = "/account/me="
 
     def form_valid(self, form):
         ### НЕТ ПРОВЕРОК
-        self.request.user.is_authenticated
         data = form.cleaned_data
         user = authenticate(username=data["username"], password=data["password"])
+        if user == None:
+            return super().form_invalid(form)
         login(self.request, user)
         self.success_url += str(user.id)
-        self.request.session["userid"] = user.id
         return super().form_valid(form)
+    
+    def form_invalid(self, form):
+        response = super().form_invalid(form)
+    
 
 class MeDetailView(DeleteView):
     model = User
-    template_name = "main\\me.html"
+    template_name = "account\\me.html"
     context_object_name = "user"

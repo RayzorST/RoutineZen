@@ -1,0 +1,31 @@
+<!doctype html>
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'account\css\me.css' %}" />
+{% endblock %}
+{% block content %}
+<h3>Добро пожаловать, {{ user.first_name }} {{ user.last_name }}!</h3>
+<div class="container-card">
+    <div class="profile">
+        <div class="avatar"></div>
+        <div class="name-card">
+            <span class="profile-name">{{ user.first_name }}</span>
+            <span class="profile-name">{{ user.last_name }}</span>
+        </div>
+        <span class="date-joined">Пользователь сайта с {{ user.date_joined.date }}</span>
+    </div>
+    <hr></hr>
+    <div class="trackers">
+        <span>Выши треки привычек:</span>
+
+        <div class="tracker">
+            <span>Выши треки привычек:</span>
+            <span>Выши треки привычек:</span>
+            <span>Выши треки привычек:</span>
+            <span>Выши треки привычек:</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
