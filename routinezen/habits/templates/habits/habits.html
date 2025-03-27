@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'habits\css\habits.css' %}" />
+{% endblock %}
+
+{% block content %}
+<form class="popular" method="post">
+    <h3>Популярные последнее время:</h3>
+    <button class="add-tracker" type="submit" name="add">Добавить трекер</button>
+</form>
+
+<div class="container-habits">
+    <div class="card">
+        <div>
+            <h4>Пьем воду каждый день!</h4>
+            <span class="target">Цель: </span><span>Пить по 2л. воды каждый день</span>
+        </div>
+        <button class="tracker-button" type="submit" name="tracker">Добавить трекер</button>
+    </div>
+
+    <div class="card">
+        <div>
+            <h4>Бросаю дедлок</h4>
+            <span class="target">Цель: </span><span>Помогите!</span>
+        </div>
+        <button class="tracker-button" type="submit" name="tracker">Добавить трекер</button>
+    </div>
+
+    <div class="card">
+        <div>
+            <h4>Как же я заебался...</h4>
+            <span class="target">Цель: </span><span>Сколько можно то</span>
+        </div>
+        <button class="tracker-button" type="submit" name="tracker">Добавить трекер</button>
+    </div>
+
+    <div class="card">
+        <div>
+            <h4>Я котлета</h4>
+            <span class="target">Цель: </span><span>Котлета котлета котлета</span>
+        </div>
+        <button class="tracker-button" type="submit" name="tracker">Добавить трекер</button>
+    </div>
+
+    <div class="card">
+        <div>
+            <h4>Живу ради энергетика</h4>
+            <span class="target">Цель: </span><span>Он будет завтра, да?</span>
+        </div>
+        <button class="tracker-button" type="submit" name="tracker">Добавить трекер</button>
+    </div>
+
+    <div class="card">
+        <div>
+            <h4>Конец</h4>
+            <span class="target">Цель: </span><span>Победа</span>
+        </div>
+        <button class="tracker-button" type="submit" name="tracker">Добавить трекер</button>
+    </div>
+</div>
+{% endblock %}

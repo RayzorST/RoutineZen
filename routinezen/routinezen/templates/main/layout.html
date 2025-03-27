@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'main\css\root.css' %}" />
+    <script src="https://kit.fontawesome.com/257e89de92.js" crossorigin="anonymous"></script>
     {% block links %}
     {% endblock %}
     <body>
@@ -11,8 +12,9 @@
             <a class="logo" href="/">Трекер привычек</a>
 
             <div class="topbar-right">
-                <a class="user-links">Привычки</a>
-                <a class="user-links">Статистика</a>
+                <a class="user-links" href="/habits">Привычки</a>
+                <a class="user-links" href="/habits/statistics">Статистика</a>
+                <a class="user-links" href="/account"><i class="fa-regular fa-user"></i></a>
             </div>
         </div>
         <div class="container"> 

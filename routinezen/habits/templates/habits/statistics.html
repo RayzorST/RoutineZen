@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'habits\css\statistics.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="yourstatis">
+    <h3>Ваша статистика:</h3>
+</div>
+<div class="container-card">
+    {% csrf_token %}
+    <div class="settings">
+        <div>
+            <span>Неделя</span>
+            <span>Месяц</span>
+            <span>Год</span>
+        </div>
+
+        <div class="info">
+            <div class="container-day-mini">
+                <div class="day-mini"></div>
+                <span>Не отслеживали</span>
+            </div>
+
+            <div class="container-day-mini">
+                <div class="day-mini" style="background: #4ABC2D;"></div>
+                <span>Стрик</span>
+            </div>
+
+            <div class="container-day-mini">
+                <div class="day-mini" style="background: #FF1E1E"></div>
+                <span>Прервал стрик</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-up">
+            <span>Бросаем курить!</span>
+            <div class="date">
+                <i class="fa-solid fa-arrow-left" style="color: #fff"></i>
+                <span>Сегодня</span>
+                <i class="fa-solid fa-arrow-right" style="color: #fff"></i>
+            </div>
+        </div>
+
+        <div class="card-down">
+            <div class="container-day">
+                <span>Пн</span>
+                <span>17.03.2025</span>
+                <div class="day"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Вт</span>
+                <span>18.03.2025</span>
+                <div class="day" style="background: #4ABC2D"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Ср</span>
+                <span>19.03.2025</span>
+                <div class="day" style="background: #4ABC2D"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Чт</span>
+                <span>20.03.2025</span>
+                <div class="day" style="background: #4ABC2D"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Пт</span>
+                <span>21.03.2025</span>
+                <div class="day" style="background: #4ABC2D"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Сб</span>
+                <span>22.03.2025</span>
+                <div class="day" style="background: #FF1E1E; border: #F8B436 3px solid;"></div>
+            </div>
+
+            <div class="container-day" >
+                <span>Вс</span>
+                <span>23.03.2025</span>
+                <div class="day"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-up">
+            <span>Бросаем курить!</span>
+            <div class="date">
+                <i class="fa-solid fa-arrow-left" style="color: #fff"></i>
+                <span>Сегодня</span>
+                <i class="fa-solid fa-arrow-right" style="color: #fff"></i>
+            </div>
+        </div>
+
+        <div class="card-down">
+            <div class="container-day">
+                <span>Пн</span>
+                <span>17.03.2025</span>
+                <div class="day"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Вт</span>
+                <span>18.03.2025</span>
+                <div class="day" style="background: #4ABC2D"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Ср</span>
+                <span>19.03.2025</span>
+                <div class="day" style="background: #4ABC2D"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Чт</span>
+                <span>20.03.2025</span>
+                <div class="day" style="background: #4ABC2D"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Пт</span>
+                <span>21.03.2025</span>
+                <div class="day" style="background: #4ABC2D"></div>
+            </div>
+
+            <div class="container-day">
+                <span>Сб</span>
+                <span>22.03.2025</span>
+                <div class="day" style="background: #FF1E1E; border: #F8B436 3px solid;"></div>
+            </div>
+
+            <div class="container-day" >
+                <span>Вс</span>
+                <span>23.03.2025</span>
+                <div class="day"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
