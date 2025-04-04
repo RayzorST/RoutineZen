@@ -6,8 +6,28 @@
     <link rel="stylesheet" href="{% static 'habits\css\habits.css' %}" />
 {% endblock %}
 
+{% block dialog %}
+{% if addTracker %}
+<form class="add-tracker-window" method="post">
+    {% csrf_token %}
+    <h2 class="add-tracker-h2">Добавьте свой трек!</h2>
+    <div>
+        <h4>Введите назавание трека:</h4>
+        <input type="text" id="name" name="name" placeholder="Название трека"/>
+        <h4>Введите цель трека:</h4>
+        <input type="text" id="name" name="name" placeholder="Цель трека"/>
+    </div>
+    <div class="add-tracker-buttons">
+        <button class="add-tracker-confirm" type="submit" name="confirm">Добавить трекер</button>
+        <button class="add-tracker-close" type="submit" name="close">Закрыть окно</button>
+    </div>
+</form>
+{% endif %}
+{% endblock %}
+
 {% block content %}
 <form class="popular" method="post">
+    {% csrf_token %}
     <h3>Популярные последнее время:</h3>
     <button class="add-tracker" type="submit" name="add">Добавить трекер</button>
 </form>
@@ -31,7 +51,7 @@
 
     <div class="card">
         <div>
-            <h4>Как же я заебался...</h4>
+            <h4>Как же я устал...</h4>
             <span class="target">Цель: </span><span>Сколько можно то</span>
         </div>
         <button class="tracker-button" type="submit" name="tracker">Добавить трекер</button>

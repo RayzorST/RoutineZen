@@ -19,7 +19,9 @@ class RegistrationFormView(FormView):
     def form_valid(self, form):
         ### НЕТ ПРОВЕРОК
         data = form.cleaned_data
-        user = User.objects.create_user(data["username"], data["email"], data["password"])
+        user = User.objects.create_user(data["username"], None, data["password"])
+        user.first_name = data["first_name"]
+        user.last_name = data["last_name"]
         user.save()
         login(self.request, user)
         self.success_url += str(user.id)

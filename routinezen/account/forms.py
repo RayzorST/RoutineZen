@@ -2,10 +2,12 @@ from django import forms
 
 class RegistrationFrom(forms.Form):
     username = forms.CharField()
-    email = forms.CharField(widget=forms.EmailInput)
+    first_name = forms.CharField()
+    last_name = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
+    confirm_password = forms.CharField(widget=forms.PasswordInput)
 
-    fields = ('username', 'email', 'password')
+    fields = ('username', 'first_name', 'last_name', 'password', 'confirm_password')
 
 class LoginForm(forms.Form):
     username = forms.CharField()
